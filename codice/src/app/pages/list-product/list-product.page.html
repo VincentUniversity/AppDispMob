@@ -1,0 +1,17 @@
+<ion-header>
+  <app-menu-toolbar></app-menu-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item  *ngFor="let p of product" [routerLink]="['detail-product', p.id]" [queryParams]="{name: p.name, price:p.price, category:p.category, stock:p.stock}" detail>
+      <ion-thumbnail slot="start">
+        <ion-img src="{{p.url}}"></ion-img>
+      </ion-thumbnail>
+      <ion-label  color="primary">
+        <h2 slot="start">{{p.name}}</h2> <h2>${{p.price}}, Stock:{{p.stock}}</h2>
+        <h3>{{p.category}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

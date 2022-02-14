@@ -1,0 +1,18 @@
+<ion-header>
+  <app-menu-toolbar></app-menu-toolbar>
+  <ion-toolbar class="ion-margin-top"
+  color="white">
+    <ion-searchbar class="mySearch" (ionChange)="filterProduct($event)" (ionClear)="clearFilter($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="(product | async) as prod">
+  <ion-list>
+    <ion-item  *ngFor="let p of prod" [routerLink]="['../detail-product', p.id]" [queryParams]="{name: p.name, price:p.price, category:p.category, stock:p.stock}" detail>
+      <ion-label  color="primary">
+        <h2 slot="start">{{p.name}}</h2> <h2>${{p.price}}, Stock:{{p.stock}}</h2>
+        <h3>{{p.category}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
