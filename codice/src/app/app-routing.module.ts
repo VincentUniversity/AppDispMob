@@ -51,10 +51,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/sub_pages/menu-toolbar/menu-toolbar.module').then( m => m.MenuToolbarPageModule)
   },
   {
-    path: 'test',
-    loadChildren: () => import('./pages/test/test.module').then( m => m.TestPageModule)
-  },
-  {
     path: 'home-logged',
     loadChildren: () => import('./pages/home-logged/home-logged.module').then( m => m.HomeLoggedPageModule)
   },
