@@ -1,9 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-
+<ion-content>  
+  <ion-card class="ion-no-margin">
+    <ion-img src="assets/images/header1.png"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{profile.name}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item >
+        <ion-icon name="mail"></ion-icon>
+        <ion-label>{{profile.email}}</ion-label>
+      </ion-item>
+        <ion-item >
+          <ion-icon name="call"></ion-icon>
+          <ion-label>3336589685</ion-label>
+        </ion-item>
+          <ion-item >
+            <ion-icon name="locate"></ion-icon>
+            <ion-label>Location</ion-label>
+          </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
